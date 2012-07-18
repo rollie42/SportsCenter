@@ -27,8 +27,8 @@ public class ESPNDataAccess implements DataAccess {
 	private final static int sAPIWWaitTime = 1000;	// The time we wait after an API call to the ESPN api
 	
 	private String mApiUrlBase = "http://api.espn.com/v1/sports";
-	private String mApiKey = "suacvy5bey6s6crfz6j9ttjg";
-	private String mURLPrefix = "http://rolnicki.net/restcache.php?url=";
+	private String mApiKey = "";
+	private String mURLPrefix = ""; //"http://rolnicki.net/restcache.php?url=";
 	private HashMap<Grouping, String> mNewsUrls = new HashMap<Grouping, String>(); 
 	
 	public LinkedList<Player> LoadPlayersFromTeam(TeamGrouping team) {

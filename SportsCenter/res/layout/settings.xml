@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:padding="10px" android:orientation="vertical">
+        <RelativeLayout
+		    android:gravity="center_vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content">
+		    <TextView
+		      android:textSize="10pt"
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content"
+		      android:text="Select One"
+		      android:id="@+id/settingsSpinnerLabel" />
+		    <Spinner 
+
+		      android:id="@+id/settingsSpinner"
+		      android:layout_alignBaseline="@id/settingsSpinnerLabel"
+		      android:layout_alignParentRight="true"
+
+		      android:layout_width="wrap_content"
+		      android:layout_height="wrap_content" />
+		</RelativeLayout>
+		<TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="test description" />
+		<ImageView
+			 android:layout_gravity="center_horizontal"
+			 android:paddingTop="10px"
+			 android:paddingBottom="5px"
+			 android:layout_height="wrap_content"
+			 android:layout_width="fill_parent"
+			 android:src="@android:drawable/divider_horizontal_bright" />
+    </LinearLayout>
+</ScrollView>

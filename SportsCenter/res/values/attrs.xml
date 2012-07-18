@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultiSlidingDrawer">
+        <attr name="orientation" format="integer" />
+        <attr name="bottomOffset" format="dimension" />
+        <attr name="topOffset" format="dimension" />
+        <attr name="allowSingleTap" format="boolean" />
+        <attr name="animateOnClick" format="boolean" />
+        <attr name="handle1" format="reference" />
+        <attr name="handle2" format="reference" />
+        <attr name="handle3" format="reference" />
+        <attr name="handle4" format="reference" />
+        <attr name="content1" format="reference" />
+        <attr name="content2" format="reference" />
+        <attr name="content3" format="reference" />
+        <attr name="content4" format="reference" />
+        <attr name="anchor">
+            <enum name="top" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="bottom" value="2"/>
+            <enum name="left" value="3"/>
+        </attr>
+        <attr name="lockOpen" format="boolean" />
+        <attr name="lockClosed" format="boolean" />
+    </declare-styleable>
+</resources>

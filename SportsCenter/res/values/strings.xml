@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="News">News</string>
+    <string name="Roster">Roster</string>
+    <string name="Standings">Standings</string>
+    <string name="GameRecap">Game Recap</string>
+    <string name="Stats">Stats</string>
+    <string name="Schedule">Schedule</string>
+    <string name="Teams">Teams</string>
+    <string name="Images">Images</string>
+    <string name="app_name">SportsCenter</string>
+</resources>

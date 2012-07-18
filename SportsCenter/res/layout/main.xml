@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:espn="http://schemas.android.com/apk/res/com.espn.ScoreCenter"
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent"
+	android:background="#ffffff">
+
+	<!-- header, displaying selected sport, team, etc -->
+	<LinearLayout android:layout_width="match_parent" android:layout_height="22dp"
+	android:orientation="horizontal" android:id="@+id/header" android:background="#333333" android:textColor="#cccccc">
+		<ImageButton android:id="@+id/headeritem1" android:layout_width="30dp" android:layout_height="match_parent" 
+		android:src="@drawable/baseball" android:background="#00000000" android:scaleType="fitCenter"
+		android:clickable="true" android:onClick="onHeaderSportClick"/>
+		<LinearLayout android:id="@+id/headerlayout2" style="@style/HeaderButton" android:onClick="onHeaderLeagueClick">
+			<com.espn.HeaderSeparator android:id="@+id/headersep1" android:layout_width="wrap_content" android:layout_height="match_parent"
+			android:duplicateParentState="true" />
+			<TextView android:id="@+id/headeritem2" android:layout_width="wrap_content" android:layout_height="match_parent"
+			android:duplicateParentState="true" android:singleLine="true" android:gravity="center_vertical"/>
+		</LinearLayout>
+		<LinearLayout android:id="@+id/headerlayout3" style="@style/HeaderButton" android:onClick="onHeaderTeamClick">
+			<com.espn.HeaderSeparator android:id="@+id/headersep2" android:layout_width="wrap_content" android:layout_height="match_parent"
+			android:duplicateParentState="true"/>
+			<TextView android:id="@+id/headeritem3" android:layout_width="wrap_content" android:layout_height="match_parent" 
+			android:duplicateParentState="true" android:singleLine="true" android:gravity="center_vertical"/>
+		</LinearLayout>
+		<LinearLayout android:id="@+id/headerlayout4" style="@style/HeaderButton" android:onClick="onHeaderPlayerClick">
+			<com.espn.HeaderSeparator android:id="@+id/headersep3" android:layout_width="wrap_content" android:layout_height="match_parent"
+			android:duplicateParentState="true"/>
+			<TextView android:id="@+id/headeritem4" android:layout_width="wrap_content" android:layout_height="match_parent" 
+			android:duplicateParentState="true" android:singleLine="true" android:gravity="center_vertical"/>
+		</LinearLayout>
+	</LinearLayout>
+	
+	<!-- body, displaying news, rosters, etc for the selected team/sport/whatever -->		
+	<com.espn.MultiSlidingDrawer android:id="@+id/SlidingDrawer2"
+		android:layout_width="match_parent" android:layout_weight="1"
+		android:layout_height="wrap_content" android:orientation="vertical"
+		android:layout_below="@id/header"	android:textColor="@color/bodyTextColor"
+		espn:handle1="@+id/handle1"
+		espn:content1="@+id/scrollview0"
+		espn:handle2="@+id/handle2"
+		espn:content2="@+id/contentLayout"
+		espn:handle3="@+id/handle3"
+		espn:content3="@+id/contentContainer3"
+		espn:handle4="@+id/handle4"
+		espn:content4="@+id/scrollview4"
+		espn:lockOpen="true">
+		
+		<!-- First drawer -->
+		<TextView android:textStyle="bold" android:background="@drawable/shapetab"
+			android:id="@id/handle1" android:text="News"
+			android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"
+			 />
+		<ScrollView android:id="@+id/scrollview0" android:layout_width = "match_parent" android:layout_height="match_parent"
+				android:fillViewport="true" android:padding="5dp">
+		</ScrollView>
+		
+		<!-- Second drawer -->
+		<TextView android:textStyle="bold" android:background="@drawable/shapetab"
+			android:id="@id/handle2" android:text="Game Recap"
+			android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1"
+			 />
+		<RelativeLayout android:layout_width="wrap_content"
+			android:id="@+id/contentLayout" android:orientation="vertical"
+			android:background="#ffffffff"
+			android:layout_height="wrap_content">	 
+			<ScrollView android:id="@+id/scrollview2" android:layout_width = "match_parent" android:layout_height="match_parent"
+				android:fillViewport="true">
+			</ScrollView>
+		</RelativeLayout>
+		
+		<!-- Third drawer -->
+		<TextView android:textStyle="bold" android:background="@drawable/shapetab" 
+			android:id="@id/handle3"  android:text="Standings"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			/>
+		<LinearLayout android:id="@+id/contentContainer3" android:layout_width = "match_parent" android:layout_height="match_parent"
+				android:fillViewport="true" android:padding="5dp" android:background="#ffffffff"
+				android:orientation="vertical">
+
+		</LinearLayout>
+		
+		<!-- Fourth drawer -->
+		<TextView android:textStyle="bold" android:background="@drawable/shapetab"
+			android:id="@id/handle4"  android:text="Players"
+			android:layout_width="match_parent" android:layout_height="wrap_content"
+			/>
+		<ScrollView android:id="@+id/scrollview4" android:layout_width = "match_parent" android:layout_height="match_parent"
+			android:fillViewport="true" android:padding="5dp" android:background="#ffffffff">
+			<RelativeLayout android:layout_width="wrap_content"
+				android:id="@+id/contentLayout4" android:orientation="vertical"
+				android:background="#ffffff"
+				android:layout_height="wrap_content">				
+			</RelativeLayout>
+		</ScrollView>
+	</com.espn.MultiSlidingDrawer>
+</RelativeLayout>
